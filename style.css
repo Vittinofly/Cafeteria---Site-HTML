@@ -5,6 +5,7 @@
     --border: 0.1 rem solid rgba(255,255,255,0.3);
     --text: #fff;
     font-size: 10px;
+    scroll-behavior: smooth;
 }
 * {
     margin: 0;
@@ -46,6 +47,26 @@ section {
     justify-content: space-between;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
+}
+
+.header section .logo {
+    margin: 1rem;
+    font-size: 3rem;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: bold;
+}
+
+.header section .logo img {
+    width: 64px;
+    height: 64px;
+}
+
+.header section .logo .logo-text {
+    color: var(--text);
+    font-size: 3rem;
 }
 
 .navbar a {
@@ -170,8 +191,12 @@ section {
     text-align: center;
     border: var(--border);
     padding: 5rem;
+    cursor: pointer;
 }
 
+.menu .box-container .box:hover {
+    background-color: var(--black);
+}
 .menu .box-container .box img {
     height: 10rem;
 }
@@ -182,8 +207,14 @@ section {
     padding: 1rem 0;
 }
 
-.menu .box-container .box price {
+.menu .box-container .box .price {
     color: var(--text);
     font-size: 2.5rem;
     padding: 0.5rem 0;
+}
+
+.menu .box-container .box .price span {
+    font-size: 1.5rem;
+    text-decoration: line-through;
+    font-weight: lighter;
 }
