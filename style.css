@@ -218,3 +218,45 @@ section {
     text-decoration: line-through;
     font-weight: lighter;
 }
+
+.review .box-container {
+    display: grid;
+    /* force three columns on larger screens for a 3x2 layout */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    /* allow wrapping to fewer columns on very narrow viewports */
+    grid-auto-rows: auto;
+}
+
+.review .box-container .box {
+    color: var(--text);
+    font-size: 1.5rem;
+    text-align: center;
+    border: var(--border);
+    padding: 5rem;
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+}
+
+.review .box-container .box:hover {
+    background-color: var(--black);
+}
+
+.review .box-container .box img {
+    height: 10rem;
+    display: block;
+    margin: 0 auto;
+    height: auto;
+    width: auto;
+}
+
+.review .box-container .comentário {
+    padding: 1rem 0;
+}
+
+.review .box-container .box .star {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+}
